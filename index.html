@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <title>Agreement Form</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+ 
+
+<div class="container">
+ 
+  <div class="header">
+  <h3 class="title" style="color: rgb(72, 72, 239);">VELTRIX CONSULTANCY</h3>
+  <img src="logo.jpeg" alt="Company Logo" class="logo">
+</div>
+
+ <img src="logo.jpeg" alt="Company Logo" class="logobg">
+ 
+
+  <!-- Company Section -->
+<!-- Services Offered Section -->
+<section  class="services">
+  <h2>Services Offered</h2>
+  <p>
+    The Company shall provide professional consultancy and website development services for the Client’s business. 
+    This includes requirement analysis, website design, development, testing, deployment, and delivery in accordance 
+    with the agreed specifications. Any additional services or changes requested by the Client beyond the agreed scope 
+    shall be undertaken only upon mutual agreement and may be subject to additional charges. The Company will also provide 
+    reasonable support and maintenance for the website during the period specified in this agreement.
+  </p>
+</section>
+
+
+  <!-- Client Section -->
+<section>
+  <h2>Client Details</h2>
+
+  <label>Client Name</label>
+  <input type="text" required>
+
+<label>Client Mobile No</label>
+<input type="tel" id="mobile" required autocomplete="off">
+<small class="error" id="mobileError"></small>
+
+
+
+  <label>Client Address</label>
+  <textarea rows="3" required></textarea>
+
+<label>Client Email</label>
+<input type="email" id="email" required autocomplete="off">
+<small class="error" id="emailError"></small>
+
+
+
+ 
+  
+</section>
+
+  <!-- Project Section -->
+ <section>
+  <h2>Project Details</h2>
+   <label>Project Name</label>
+  <input type="text" required>
+
+
+  <label>Project Description</label>
+  <textarea required></textarea>
+
+  <label>Project Budget (₹)</label>
+  <input type="number" id="budget" required>
+
+
+  <!-- Payment Section -->
+
+  
+  
+  <h2>Installment Amounts</h2>
+
+  <button onclick="calculateInstallments()" class="calc-btn">
+  Calculate Installments
+</button>
+
+<div class="installment-bar">
+  <button class="btn btn-glow advance">First: ₹0</button>
+  <button class="btn btn-glow project">Second: ₹0</button>
+  <button class="btn btn-glow completion">Third: ₹0</button>
+</div>
+
+
+</section>
+
+
+
+ <section>
+  <h2>Payment Status</h2>
+
+  <label class="checkbox-item">
+    <input type="checkbox" required>
+    Advance Payment
+  </label>
+
+  <label class="checkbox-item">
+    <input type="checkbox">
+    Completion of Project.
+  </label>
+
+  <label class="checkbox-item">
+    <input type="checkbox">
+    Delivery of Project.
+  </label>
+</section>
+
+
+
+  <!-- Terms Section -->
+  <section>
+  <h2>Terms & Conditions</h2>
+  <ul class="terms">
+    <li>
+      The advance payment made by the Client is strictly non-refundable under any circumstances.
+    </li>&nbsp;
+    <li>
+      This agreement shall remain valid for a contract period of six (6) months from the date of commencement.
+    </li>&nbsp;
+    <li>
+      If the Client chooses to discontinue the project or if the project is not completed due to reasons attributable to the Client, any amount paid shall not be refunded.
+    </li>&nbsp;
+    <li>
+      Any delay in payments beyond the agreed schedule may attract applicable penalties or result in suspension of services.
+    </li>
+  </ul>
+</section>
+
+
+  <!-- Signatures -->
+  <section class="sign">
+  <div>
+    <p><strong>Founder Signature:</strong> ________________________</p>
+    &nbsp;&nbsp;
+    <p><strong>Date:</strong> ________________________</p>
+  </div>
+
+  <div>
+    <p><strong>Client Signature:</strong> ________________________</p>
+    &nbsp;&nbsp;
+    <p><strong>Date:</strong> ________________________</p>
+  </div>
+
+</section>
+  <section class="sign">
+  <div>
+    <p><strong>Co-Founder Signature:</strong>____________________</p>
+    &nbsp;&nbsp;
+    <p><strong>Date:</strong> _______________________________</p>
+  </div>
+
+  <div>
+    <p><strong>Witness Signature:</strong> ________________________</p>
+    &nbsp;&nbsp;
+    <p><strong>Date:</strong> _______________________________</p>
+  </div>
+
+</section>
+
+<div class="print-btn">
+  <button onclick="printPage()">Print</button>
+</div>
+
+
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

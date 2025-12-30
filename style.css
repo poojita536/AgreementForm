@@ -1,0 +1,245 @@
+body {
+  font-family:  'Inter', sans-serif;
+  background: linear-gradient(135deg,#D980FA,#9980FA, #25CCF7);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;   /* horizontal center */
+  align-items: center;       /* vertical center */
+  padding: 20px;
+}
+.title {
+   font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #eb4d4b;
+}
+
+
+.container {
+  width:100%;
+  max-width: 900px;
+  margin: auto;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+h1 {
+  text-align: center;
+  color: #4b0082;
+}
+
+h2 {
+  color: #333;
+}
+
+section {
+  margin-bottom: 25px;
+  padding: 15px;
+  border-left: 5px solid #128ba0;
+  background: #f9f9ff;
+  border-radius: 6px;
+}
+
+h2 {
+  padding-bottom: 5px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+input, textarea {
+    font-family: 'Inter', sans-serif;
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+/* input:focus, textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 5px rgba(102,126,234,0.5);
+} */
+
+
+textarea {
+  height: 80px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.sign {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sign div {
+  width: 45%;
+}
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.checkbox-item input {
+  width: 18px;
+  height: 18px;
+}
+
+.print-btn {
+  text-align: center;
+  margin-top: 30px;
+
+}
+
+.print-btn button {
+  background: linear-gradient(to right, #667eea, #764ba2);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 25px;
+  font-size: 16px;
+}
+
+.print-btn button:hover {
+  opacity: 0.9;
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  .sign {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.sign div {
+  width: 45%;
+}
+
+
+  section {
+    padding: 12px;
+  }
+}
+.terms {
+  margin-top: 10px;
+  padding-left: 20px;
+  line-height: 1.6;
+  font-size: 15px;
+}
+@page {
+  size: A4;
+  margin: 25mm 20mm 25mm 20mm;
+}
+
+@media print {
+  body {
+    background: white;
+    padding: 0;
+  }
+
+  .container {
+    box-shadow: none;
+    border-radius: 0;
+    max-width: 100%;
+  }
+
+  section {
+    page-break-inside: avoid;
+  }
+}
+#installment-result {
+  margin-top: 15px;
+}
+.installment-bar {
+  display: flex;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.installment-bar button {
+  flex: 1;
+  padding: 14px 12px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 22px;
+  border: 1px solid #d0d7e2;
+  background: #f8f9fc;
+  color: #2d3748;
+  cursor: default;
+  transition: all 0.3s ease;
+}
+
+/* Subtle hover (desktop only) */
+.installment-bar button:hover {
+  background: #eef2ff;
+  border-color: #667eea;
+}
+
+/* After calculation (active look) */
+.installment-bar button.active {
+  background: linear-gradient(135deg, #eef2ff, #ffffff);
+  border-color: #667eea;
+  color: #1a2fd4;
+  box-shadow: 0 6px 14px rgba(102, 126, 234, 0.15);
+}
+
+
+.header {
+  display: flex;
+  align-items: center;
+   /* centers the title */
+  position: relative; /* allows logo to be positioned on right */
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  flex: 1; /* allows the title to take available space */
+}
+
+.logo {
+  width: 120px;   /* increase size */
+  height: auto;   /* keep aspect ratio */
+}
+
+.error {
+  color: red;
+  font-size: 13px;
+  display: none; /* hidden by default */
+}
+
+.logobg {
+  position: absolute;
+  top: 170%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;  
+      text-align: center; 
+      height: 400px;     /* adjust size */
+  opacity: 0.15;             /* watermark effect */
+  z-index: 0;                /* send behind content */
+  pointer-events: none;     /* prevents click blocking */
+}
